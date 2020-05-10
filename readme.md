@@ -2,9 +2,9 @@
 
 Hi, 🤚 This repository has been created for content developers interested in being part of our team to develop online programming courses for kids and teens within our online platform. You are supposed to follow guidelines here and create a short course. When you are done, you should share your repository with us, and we will check and back to you.
 
- This course is about teaching Javascript with PhaserJS. The output of this little game is available here https://unclecode.github.io/phaserjs-tutorial-content/
+ This course is about teaching Javascript with PhaserJS. The output of this little game is available (here) [https://unclecode.github.io/phaserjs-tutorial-content/]
 
-👉 I have recorded a video to explain this guideline, you can watch it here https://www.loom.com/share/00c1f996fc5145b2a36bd48eb909b49b
+👉 I have recorded a video to explain this guideline, you can watch it (here)[https://www.loom.com/share/00c1f996fc5145b2a36bd48eb909b49b]
 
 ## Steps:
 - Step 0: Create `index.html`, add a script tag to the PhaserJs CDN, and create the `game.js` file.
