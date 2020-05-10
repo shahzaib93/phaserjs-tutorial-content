@@ -1,8 +1,11 @@
-# Guidlines for this Tutorial 🤓
+# Guidelines for this Tutorial 🤓
 
-Hi 🤚 This is the repo I have created to specify the guidelines for creating a tutorial for my courses. This game is available here https://unclecode.github.io/phaserjs-tutorial-content/
+Hi, 🤚 This repository has been created for content developers interested in being part of our team to develop online programming courses for kids and teens within our online platform. You are supposed to follow guidelines here and create a short course. When you are done, you should share your repository with us, and we will check and back to you.
 
-- Step 0: Create `index.html`, add a script tag to the phaserJs CDN and create the `game.js` file.
+ This course is about teaching Javascript with PhaserJS. The output of this little game is available here https://unclecode.github.io/phaserjs-tutorial-content/
+
+## Steps:
+- Step 0: Create `index.html`, add a script tag to the PhaserJs CDN, and create the `game.js` file.
   - Go through of `index.html` and explain elements special `div#game` element 
  
 - Step 1: Create the game object. In this step we are focusing on the concept of object:
@@ -21,8 +24,8 @@ new Phaser.Game({
     - `Game({...})` constructot
     - Input parameters
   
-- Step 2: Create `assets` folder and explain items
-- Step 3: Explain `scene` concept in PhaserJS, You can follow the given code below to illustrate the scene life cysle for students. Focus is on the concept of `class` and it's functions.
+- Step 2: Create `assets` folder and explain items within it.
+- Step 3: Explain `scene` concept in PhaserJS, You can follow the given code below to illustrate the scene life cysle for students. Focus is on the concept of `class` and `function`.
 ```javascript
 class mainScene {
   // explain scene life cycle
@@ -49,7 +52,7 @@ class mainScene {
  }
  ```
  
- - Step 5: Create assets and implement `create()` function without scoring and handeling keyboard event. In this step we explain more on event-driving model.
+ - Step 5: Create assets and implement `create()` function without scoring and handeling keyboard event. In this step we explain more on event-driving model as well if `if` conditional structure.
  ```javascript
  create() {
     this.player = this.physics.add.sprite(100, 100, 'player');
@@ -81,12 +84,8 @@ create() {
     } 
   }
 ```
-    this.score = 0;
-    let style = { font: '20px Arial', fill: '#fff' };
-    this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
 
-
-- Step 7: Implement collision. In this part we are focusing on the control structure(`if`) to check if two objects having collision or not. Use the boolean version of `overlap` function between the coin and player by adding the following code in the beginning of `update()` function.
+- Step 7: Implement the collision between coin and player. In this part, we are focusing on the control structure(`if`) to check if two objects have collision or not. Use the boolean version of the `overlap` function between the coin and player by adding the following code at the beginning of the `update()` function.
 ```javascript
 if (this.physics.overlap(this.player, this.coin)) {
       console.log('💥')
@@ -119,13 +118,13 @@ create() {
  }
 ```
 
-## Consdier following points:
+## Consider the following points:
 - For each step, run the app and shows the result plus explanation.
-- For each step create a folder `step n` and keep a copy of all files for `step n`.
+- For each step, create a folder `stepN` and keep a copy of all files for `stepN`.
 - Within each folder, create a subfolder called `lecture` and keep:
   - A markdown file contains tutorial content.
   - A text script file for voice over for that step
-  - Any extra images or resources you need to mention within the tuorial
+  - Any extra images or resources you need to mention within the tutorial
   - Create a file like `practice.js` contains up to 5 challenges for students relevant to the step topic.
 
 
@@ -147,3 +146,4 @@ create() {
       - script.txt
   ...
 ```
+
