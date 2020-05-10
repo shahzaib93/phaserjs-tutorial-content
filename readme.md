@@ -1,5 +1,7 @@
 # Guidlines for this Tutorial 🤓
 
+Hi 🤚 This is the repo I have created to specify the guidelines for creating a tutorial for my courses. This game is available here https://unclecode.github.io/phaserjs-tutorial-content/
+
 - Step 0: Create `index.html`, add a script tag to the phaserJs CDN and create the `game.js` file.
   - Go through of `index.html` and explain elements special `div#game` element 
  
