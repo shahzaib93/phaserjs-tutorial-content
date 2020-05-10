@@ -1,7 +1,9 @@
 # Guidlines for this Tutorial 🤓
 
-- Step 0: Create `index.html`, link phaserJs and create `game.js` file
-- Step 1: Create an empty game:
+- Step 0: Create `index.html`, add a script tag to the phaserJs CDN and create the `game.js` file.
+  - Go through of `index.html` and explain elements special `div#game` element 
+ 
+- Step 1: Create the game object. In this step we are focusing on the concept of object:
 ```javascript
 new Phaser.Game({
   width: 700,
@@ -12,10 +14,13 @@ new Phaser.Game({
   parent: 'game',
 });
 ```
-  - Explain `new` operator, `Game({...})` as well as input parameters
+  - Explain about following parts:
+    - `new` operator
+    - `Game({...})` constructot
+    - Input parameters
   
 - Step 2: Create `assets` folder and explain items
-- Step 3: Explain `scene` concept in PhaserJS
+- Step 3: Explain `scene` concept in PhaserJS, You can follow the given code below to illustrate the scene life cysle for students. Focus is on the concept of `class` and it's functions.
 ```javascript
 class mainScene {
   // explain scene life cycle
@@ -32,6 +37,8 @@ class mainScene {
 ```
 
 - Step 4: Load assets:
+  - Explain why `preload()` is the best place for loading
+  - Explain `this` keyword
 
 ```javascript
  preload() {
@@ -40,28 +47,21 @@ class mainScene {
  }
  ```
  
- - Step 5: Create assets and fill up `create` function without keyboard
+ - Step 5: Create assets and implement `create()` function without scoring and handeling keyboard event. In this step we explain more on event-driving model.
  ```javascript
  create() {
     this.player = this.physics.add.sprite(100, 100, 'player');
     this.coin = this.physics.add.sprite(300, 200, 'coin');
-
-    this.score = 0;
-    let style = { font: '20px Arial', fill: '#fff' };
-    this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
   }
 ```
 
-- Step 6: Add keyboard handler
+- Step 6: Add keyboard handler. 
+  - Explain `CursorKeys()`
+  - Explain `update()` function
+  - Explain cartesian coordinate system 
 ```javascript
 create() {
-    this.player = this.physics.add.sprite(100, 100, 'player');
-    this.coin = this.physics.add.sprite(300, 200, 'coin');
-
-    this.score = 0;
-    let style = { font: '20px Arial', fill: '#fff' };
-    this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
-
+    // previous code
     this.arrow = this.input.keyboard.createCursorKeys();
   }
 
@@ -79,31 +79,52 @@ create() {
     } 
   }
 ```
+    this.score = 0;
+    let style = { font: '20px Arial', fill: '#fff' };
+    this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
 
-- Step 7: Add collision concept, by adding following code to beginning of `update()` function and implement `hit()` function (Skip `tween` function).
+
+- Step 7: Implement collision. In this part we are focusing on the control structure(`if`) to check if two objects having collision or not. Use the boolean version of `overlap` function between the coin and player by adding the following code in the beginning of `update()` function.
 ```javascript
 if (this.physics.overlap(this.player, this.coin)) {
-      this.hit();
+      console.log('💥')
 }
 ```
+  - Run the code and show it works
 
+- Step 8: Add `hit()` function. In this step we focus on concept of `function()`. First you add the code in the if body within the `update()` function, then explain the benefit of modularity and move it into new function `hit()`.
 ```javascript
 hit() {
     this.coin.x = Phaser.Math.Between(100, 600);
     this.coin.y = Phaser.Math.Between(100, 200);
-
-    this.score += 10;
-    this.scoreText.setText('score: ' + this.score);
 }
 ```
 
+    
+- Step 9: Add scoring. First explain the scoring concept that we get 10+ on each hit. Then invite students to think on what changes should be done, like 1) Add a text label to show score which should be done in `create()`, 2) update the text label on hit which should be done within `'hit()` function which is part of `update()` cycle. In this way students get more familiar with differences between preload/creat/update.
+```javascript
+create() {
+  // previoud code
+   this.score = 0;
+   let style = { font: '20px Arial', fill: '#fff' };
+   this.scoreText = this.add.text(20, 20, 'score: ' + this.score, style);
+ }
+ 
+ hit() {
+  // previoud code
+   this.score += 10;
+   this.scoreText.setText('score: ' + this.score);
+ }
+```
+
+## Consdier following points:
 - For each step, run the app and shows the result plus explanation.
 - For each step create a folder `step n` and keep a copy of all files for `step n`.
 - Within each folder, create a subfolder called `lecture` and keep:
   - A markdown file contains tutorial content.
   - A text script file for voice over for that step
   - Any extra images or resources you need to mention within the tuorial
-  - Create a file like `practice.js` contains up to 5 challenges for students relevant to step topic.
+  - Create a file like `practice.js` contains up to 5 challenges for students relevant to the step topic.
 
 
 ## Folder Structure 
