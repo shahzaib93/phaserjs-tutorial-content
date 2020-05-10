@@ -4,7 +4,8 @@ Hi, 🤚 This repository has been created for content developers interested in b
 
  This course is about teaching Javascript with PhaserJS. The output of this little game is available (here) [https://unclecode.github.io/phaserjs-tutorial-content/]
 
-👉 I have recorded a video to explain this guideline, you can watch it (here)[https://www.loom.com/share/00c1f996fc5145b2a36bd48eb909b49b]
+👉 I have recorded a video to explain this guideline, you can watch it 
+(here)[https://www.loom.com/share/00c1f996fc5145b2a36bd48eb909b49b]
 
 ## Steps:
 - Step 0: Create `index.html`, add a script tag to the PhaserJs CDN, and create the `game.js` file.
