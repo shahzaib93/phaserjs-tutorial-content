@@ -4,6 +4,8 @@ Hi, 🤚 This repository has been created for content developers interested in b
 
  This course is about teaching Javascript with PhaserJS. The output of this little game is available here https://unclecode.github.io/phaserjs-tutorial-content/
 
+👉 I have recorded a video to explain this guideline, you can watch it here https://www.loom.com/share/00c1f996fc5145b2a36bd48eb909b49b
+
 ## Steps:
 - Step 0: Create `index.html`, add a script tag to the PhaserJs CDN, and create the `game.js` file.
   - Go through of `index.html` and explain elements special `div#game` element 
@@ -102,7 +104,7 @@ hit() {
 ```
 
     
-- Step 9: Add scoring. First explain the scoring concept that we get 10+ on each hit. Then invite students to think on what changes should be done, like 1) Add a text label to show score which should be done in `create()`, 2) update the text label on hit which should be done within `'hit()` function which is part of `update()` cycle. In this way students get more familiar with differences between preload/creat/update.
+- Step 9: Add scoring. First explain the scoring concept that we get 10+ on each hit. Then invite students to think on what changes should be done, like 1) Add a text label to show score which should be done in `create()`, 2) update the text label on hit which should be done within `hit()` function which is part of `update()` cycle. In this way students get more familiar with differences between preload/creat/update.
 ```javascript
 create() {
   // previoud code
